@@ -1,19 +1,19 @@
 def starts_with_a_vowel?(word)
-
+  word.match(/^[aeiouAEIOU]/) ? true : false
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-
+  text.scan(/un[a-z]{1,}ing/)
 end
 
 def words_five_letters_long(text)
-
+  text.scan(/\b[a-z]{5}\b/)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-
+  text.scan(/^[A-Z][!.?]$/)
 end
 
 def valid_phone_number?(phone)
-
+  phone.match(/[1-9]{3}-[1-9]{3}-[1-9]{4}/)
 end
